@@ -222,6 +222,7 @@ body{
 	z-index: 9;
     font-size: 22px;
     border-radius: 50%;
+    z-index: 99999;
 }
 /* button end */
 .service-section{
@@ -504,22 +505,20 @@ body{
     color: #0ef;
     font-weight: 400;
  }
-
-
- .about-section .main-col .right-col .img img{
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    border: 2px solid #0ef;
-    box-shadow: 0px 0px 20px #0ef;
- }
+ .about-section .main-col .right-col .img img {
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	border: 2px solid #0ef;
+	box-shadow: 0px 0px 20px #0ef;
+}
  
  .about-section .main-col .right-col{
     text-align: right;
     padding-right: 30px;
  }
  .about-section .main-col .right-col .icon{
-    margin-top: 85px;
+    margin-top: 82px;
  }
  .about-section .main-col .right-col .icon li{
     display: inline-block;
@@ -1413,11 +1412,18 @@ body{
 /* footer section end */
 
 /* responsive start */
+@media screen and (max-width: 1100px){
+    .banner-section {
+        height: 0vh;
+        padding-bottom: 255px;
+    }
+}
 @media screen and (max-width: 1024px){
     .service-section .main-col{
         column-gap: 20px;
         row-gap: 20px;
     } 
+   
 }
 @media screen and (max-width: 989px){
     .banner-section .main-col .left-col {
@@ -1483,6 +1489,9 @@ body{
         z-index: 9;
         border-bottom: 1px solid #0ef;
     }
+    .banner-section {
+        padding-top: 118px;
+    }
 
 }
 @media screen and (max-width: 800px){
@@ -1504,9 +1513,9 @@ body{
     .contact-section .main-col .left-col {
         margin-left: 0px;
     }
-    .contact-section .main-col .right-col {
+    /* .contact-section .main-col .right-col {
         margin-right: 0px;
-    }
+    } */
     .contact-section .main-col {
         column-gap: 20px;
     }
@@ -1562,6 +1571,9 @@ body{
     .slicknav_icon{
         opacity: 0;
     }
+    .skills-section .main-col .left-col {
+        margin: 0;
+    }
 }
 @media screen and (max-width: 767px){
     .banner-section .main-col{
@@ -1582,7 +1594,7 @@ body{
         height: 240px;
     }
     .banner-section .main-col .right-col .img-tag img {
-        height: 325px;
+        height: 306px;
         max-width: 300px;
     }
     .banner-section .main-col .left-col {
@@ -1631,8 +1643,8 @@ body{
         padding-top: 4px;
     }
     .contact-section .main-col {
-        grid-template-columns: 1fr;
-        row-gap: 40px;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 18px;
     }
     .banner-section {
         padding-top: 142px;
@@ -1643,17 +1655,38 @@ body{
     .skills-section .skill-btn {
         margin-top: 50px;
     }
+    .service-section {
+        padding-top: 265px;
+    }
+}
+@media screen and (max-width: 640px){
+    .contact-section .main-col {
+        grid-template-columns: 1fr;
+        row-gap: 18px;
+    }
+    .contact-section .main-col .left-col {
+        margin-left: 0px;
+        text-align: center;
+    }
+    .contact-section .main-col .left-col {
+        margin-left: 0px;
+    }
 }
 @media screen and (max-width: 520px){
     .project-section .main-col {
         grid-template-columns: 1fr;
         row-gap: 40px;
     }
+    .contact-section .main-col .right-col{
+        width: 100%;
+    }
+    .contact-section .main-col .right-col {
+        margin-right: 0px;
+    }
 }
 @media screen and (max-width: 480px){
     .service-section {
-        padding-top: 100px;
-        padding-bottom: 22px;
+        padding-top: 250px;
     }
     .service-section .header p {
         font-size: 18px;
@@ -1701,13 +1734,17 @@ body{
         font-size: 14px;
     }
     .skills-section .main-col .left-col .left-main-content {
-        padding: 60px 65px;
+        /* padding: 60px 75px; */
         grid-template-columns: 1fr;
         align-items: center;
         row-gap: 80px;
     }
+    .skills-section .main-col .left-col {
+        margin: 0 auto;
+        width: 100%;
+    }
     .skills-section .main-col .left-col .head {
-        left: 15%;
+        left: 25%;
     }
     .skills-section .header h2 {
         font-size: 29px;
@@ -1745,12 +1782,37 @@ body{
     .banner-section{
         padding-top: 175px;
     }
+    .skills-section .main-col .left-col .left-main-content .main-skill {
+        width: 160px;
+        height: 160px;
+        position: relative;
+        margin: 0 auto;
+    }
+    .skills-section .main-col .left-col .left-main-content .main-skill-2 {
+        width: 160px;
+        height: 160px;
+        position: relative;
+        margin: 0 auto;
+    }
+    .skills-section .main-col .left-col .left-main-content .main-skill-3 {
+        width: 160px;
+        height: 160px;
+        position: relative;
+        margin: 0 auto;
+    }
+    .skills-section .main-col .left-col .left-main-content .main-skill-4 {
+        width: 160px;
+        height: 160px;
+        position: relative;
+        margin: 0 auto;
+    }
+
 }
 @media screen and (max-width:380px) {
     .about-section .main-col .left-col {
         padding-left: 0px;
-        padding-right: 15px;
-     }
+        /* padding-right: 15px; */
+    }
 }
 
 /* responsive end */
